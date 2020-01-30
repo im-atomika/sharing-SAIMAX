@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Amezia - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A premium admin dashboard template by themesbrand" name="description" />
+        <meta content="Themesbrand" name="author" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+            <div class="topbar-main">
+                <div class="container-fluid">
+                    <!-- LOGO -->
+                    <div class="topbar-left">
+                        <a href="index.html" class="logo">
+                            <span>
+                                <img src="assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
+                            </span>
+                            <span>
+                                <img src="assets/images/logo.png" alt="logo-large" class="logo-lg">
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Navbar -->
+                    <nav class="navbar-custom">
+
+                        <!-- Search input -->
+                        <div class="search-wrap" id="search-wrap">
+                            <div class="search-bar">
+                                <input class="search-input" type="search" placeholder="Search here.." />
+                                <a href="javascript:void(0);" class="close-search search-btn" data-target="#search-wrap">
+                                    <i class="mdi mdi-close-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="list-unstyled topbar-nav float-right mb-0">
+                            <li>
+                                <a class="nav-link waves-effect waves-light search-btn" href="javascript:void(0);" data-target="#search-wrap">
+                                    <i class="mdi mdi-magnify nav-icon"></i>
+                                </a>
+                            </li>
+
+                            <li class="hidden-sm">
+                                <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="javascript: void(0);" role="button"
+                                    aria-haspopup="false" aria-expanded="false">
+                                    English <img src="assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt=""/> <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="javascript: void(0);"><span> German </span><img src="assets/images/flags/germany_flag.jpg" alt="" class="ml-2 float-right" height="14"/></a>
+                                    <a class="dropdown-item" href="javascript: void(0);"><span> Italian </span><img src="assets/images/flags/italy_flag.jpg" alt="" class="ml-2 float-right" height="14"/></a>
+                                    <a class="dropdown-item" href="javascript: void(0);"><span> French </span><img src="assets/images/flags/french_flag.jpg" alt="" class="ml-2 float-right" height="14"/></a>
+                                    <a class="dropdown-item" href="javascript: void(0);"><span> Spanish </span><img src="assets/images/flags/spain_flag.jpg" alt="" class="ml-2 float-right" height="14"/></a>
+                                    <a class="dropdown-item" href="javascript: void(0);"><span> Russian </span><img src="assets/images/flags/russia_flag.jpg" alt="" class="ml-2 float-right" height="14"/></a>
+                                </div>
+                            </li>
+
+                            <li class="dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
+                                    aria-haspopup="false" aria-expanded="false">
+                                    <i class="mdi mdi-bell-outline nav-icon"></i>
+                                    <span class="badge badge-danger badge-pill noti-icon-badge">2</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+                                    <!-- item-->
+                                    <h6 class="dropdown-item-text">
+                                        Notifications (258)
+                                    </h6>
+                                    <div class="slimscroll notification-list">
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                            <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                                            <p class="notify-details">Your order is placed<small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                        </a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
+                                            <p class="notify-details">New Message received<small class="text-muted">You have 87 unread messages</small></p>
+                                        </a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-info"><i class="mdi mdi-martini"></i></div>
+                                            <p class="notify-details">Your item is shipped<small class="text-muted">It is a long established fact that a reader will</small></p>
+                                        </a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
+                                            <p class="notify-details">Your order is placed<small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                        </a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-danger"><i class="mdi mdi-message"></i></div>
+                                            <p class="notify-details">New Message received<small class="text-muted">You have 87 unread messages</small></p>
+                                        </a>
+                                    </div>
+                                    <!-- All-->
+                                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
+                                        View all <i class="fi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="hidden-sm">
+                                <a class="nav-link waves-effect waves-light" href="javascript:void(0);" id="btn-fullscreen">
+                                    <i class="mdi mdi-fullscreen nav-icon"></i>
+                                </a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+                                    aria-haspopup="false" aria-expanded="false">
+                                    <img src="assets/images/users/user-1.jpg" alt="profile-user" class="rounded-circle" />
+                                    <span class="ml-1 nav-user-name hidden-sm">Amelia <i class="mdi mdi-chevron-down"></i> </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#"><i class="dripicons-user text-muted mr-2"></i> Profile</a>
+                                    <a class="dropdown-item" href="#"><i class="dripicons-wallet text-muted mr-2"></i> My Wallet</a>
+                                    <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Settings</a>
+                                    <a class="dropdown-item" href="#"><i class="dripicons-lock text-muted mr-2"></i> Lock screen</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="dripicons-exit text-muted mr-2"></i> Logout</a>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <!-- Mobile menu toggle-->
+                                <a class="navbar-toggle nav-link" id="mobileToggle">
+                                    <div class="lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                                <!-- End mobile menu toggle-->
+                            </li>
+                        </ul>
+
+                        <ul class="list-unstyled topbar-nav mb-0">
+
+                            <li class="hidden-sm">
+                                <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+                                    aria-haspopup="false" aria-expanded="false">
+                                    <i class="mdi mdi-library-plus mr-2"></i>Tools <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="dropdown-menu">
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        Photoshop
+                                    </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        Visual Studio
+                                    </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        Sublime Text 3
+                                    </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        Phpstorm
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="hidden-sm">
+                                <a class="nav-link waves-effect waves-light" href="../landing/index.html" target="_blank">
+                                    <i class="mdi mdi-airplane mr-2"></i>Landing
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- end navbar-->
+                </div>
+            </div><!--end topbar-main-->
+
+
+            <!-- MENU Start -->
+            <div class="navbar-custom-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    Dashboard
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="index.html">Dashboard 1</a></li>
+                                    <li><a href="index-2.html">Dashboard 2</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"><i class="mdi mdi-email"></i>Email</a>
+                                <ul class="submenu">
+                                    <li><a href="email-inbox.html">Inbox</a></li>
+                                    <li><a href="email-read.html">Read Email</a></li>
+                                    <li><a href="email-compose.html">Compose Email</a></li>
+                                </ul>
+                            </li>
+
+                           <li class="has-submenu">
+                                <a href="#"><i class="mdi mdi-bullseye"></i>Advanced UI</a>
+                                <ul class="submenu">
+                                    <li><a href="advanced-rangeslider.html">Range Slider</a></li>
+                                    <li><a href="advanced-sweetalerts.html">Sweet Alerts</a></li>
+                                    <li><a href="advanced-nestable.html">Nestable List</a></li>
+                                    <li><a href="advanced-ratings.html">Ratings</a></li>
+                                    <li><a href="advanced-highlight.html">Highlight</a></li>
+                                    <li><a href="advanced-clipboard.html">Clipboard</a></li>
+                                    <li><a href="advanced-lightbox.html">Lightbox</a></li>
+                                    <li><a href="advanced-session.html">Session Timeout</a></li>
+                                    <li><a href="advanced-scrollbars.html">Scrollbars</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"><i class="mdi mdi-buffer"></i>UI Elements</a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a href="ui-alerts.html">Alerts</a></li>
+                                            <li><a href="ui-buttons.html">Buttons</a></li>
+                                            <li><a href="ui-cards.html">Cards</a></li>
+                                            <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                                            <li><a href="ui-modals.html">Modals</a></li>
+                                            <li><a href="ui-spinners.html">Spinners</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="ui-typography.html">Typography</a></li>
+                                            <li><a href="ui-progress.html">Progress</a></li>
+                                            <li><a href="ui-tabs-accordions.html">Tabs & Accordions</a></li>
+                                            <li><a href="ui-tooltips-popovers.html">Tooltips & Popover</a></li>
+                                            <li><a href="ui-carousel.html">Carousel</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="ui-pagination.html">Pagination</a></li>
+                                            <li><a href="ui-video.html">Videos</a></li>
+                                            <li><a href="ui-colors.html">Colors</a></li>
+                                            <li><a href="ui-grid.html">Grid System</a></li>
+                                            <li><a href="ui-toasts.html">Toasts</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"><i class="mdi mdi-arrow-down-drop-circle-outline"></i>More</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="calendar.html">Calendar</a>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Icons</a>
+                                        <ul class="submenu">
+                                            <li><a href="icons-materialdesign.html">Material Design</a></li>
+                                            <li><a href="icons-dripicons.html">Dripicons</a></li>
+                                            <li><a href="icons-fontawesome.html">Font awesome</a></li>
+                                            <li><a href="icons-themify.html">Themify</a></li>
+                                            <li><a href="icons-typicons.html">Typicons</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Tables </a>
+                                        <ul class="submenu">
+                                            <li><a href="tables-basic.html">Basic</a></li>
+                                            <li><a href="tables-datatable.html">Datatables</a></li>
+                                            <li><a href="tables-responsive.html">Responsive</a></li>
+                                            <li><a href="tables-editable.html">Editable</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Forms</a>
+                                        <ul class="submenu">
+                                            <li><a href="forms-elements.html">Basic Elements</a></li>
+                                            <li><a href="forms-advanced.html">Advance Elements</a></li>
+                                            <li><a href="forms-validation.html">Validation</a></li>
+                                            <li><a href="forms-wizard.html">Wizard</a></li>
+                                            <li><a href="forms-editors.html">Editors</a></li>
+                                            <li><a href="forms-repeater.html">Repeater</a></li>
+                                            <li><a href="forms-x-editable.html">X Editable</a></li>
+                                            <li><a href="forms-uploads.html">File Upload</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Maps</a>
+                                        <ul class="submenu">
+                                            <li><a href="maps-google.html">Google Maps</a></li>
+                                            <li><a href="maps-vector.html">Vector Maps</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Email Templates</a>
+                                        <ul class="submenu">
+                                            <li><a href="email-templates-basic.html">Basic Action Email</a></li>
+                                            <li><a href="email-templates-alert.html">Alert Email</a></li>
+                                            <li><a href="email-templates-billing.html">Billing Email</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"><i class="mdi mdi-chart-bar"></i>Charts</a>
+                                <ul class="submenu">
+                                    <li><a href="charts-morris.html">Morris</a></li>
+                                    <li><a href="charts-chartist.html">Chartist</a></li>
+                                    <li><a href="charts-flot.html">Flot</a></li>
+                                    <li><a href="charts-peity.html">Peity</a></li>
+                                    <li><a href="charts-chartjs.html">Chartjs</a></li>
+                                    <li><a href="charts-sparkline.html">Sparkline</a></li>
+                                    <li><a href="charts-knob.html">Jquery Knob</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"><i class="mdi mdi-book-open-page-variant"></i>Pages</a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a href="page-tour.html">Tour</a></li>
+                                            <li><a href="page-timeline.html">Timeline</a></li>
+                                            <li><a href="page-invoice.html">Invoice</a></li>
+                                            <li><a href="page-treeview.html">Treeview</a></li>
+                                            <li><a href="page-profile.html">Profile</a></li>
+                                            <li><a href="page-pricing.html">Pricing</a></li>
+                                            <li><a href="page-faq.html">FAQs</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="page-starter.html">Starter Page</a></li>
+                                            <li><a href="auth-login.html">Login</a></li>
+                                            <li><a href="auth-register.html">Register</a></li>
+                                            <li><a href="auth-recoverpw.html">Recover Password</a></li>
+                                            <li><a href="auth-lock-screen.html">Lock Screen</a></li>
+                                            <li><a href="auth-404.html">Error 404</a></li>
+                                            <li><a href="auth-500.html">Error 500</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- End navigation menu -->
+                    </div> <!-- end navigation -->
+                </div> <!-- end container-fluid -->
+            </div> <!-- end navbar-custom -->
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Page Content-->
+        <div class="wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="float-right">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Amezia</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Charts</a></li>
+                                    <li class="breadcrumb-item active">Chart Js</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Chart Js</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title end breadcrumb -->
+                <div class="row">
+                    <div class="col-lg-12 col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="mt-0">Donut Chart</h5>
+                                <p class="text-muted font-13 mb-4 d-inline-block text-truncate w-100">Pie and doughnut charts are probably
+                                    the most commonly used chart there are. They are divided into segments,
+                                    the arc of each segment shows the proportional value of each piece of
+                                    data.
+                                </p>
+                                <canvas id="doughnut" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+
+                    <div class="col-lg-12 col-xl-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="mt-0">Line Chart</h5>
+                                <p class="text-muted font-13 mb-4 d-inline-block text-truncate w-100">A line chart is a way of plotting data
+                                    points on a line. Often, it is used to show trend data, and the
+                                    comparison of two data sets.
+                                </p>
+                                <canvas id="lineChart" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+
+                    <div class="col-lg-12 col-xl-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="mt-0">Bar Chart</h5>
+                                <p class="text-muted font-13 mb-4 d-inline-block text-truncate w-100">A bar chart is a way of showing data as
+                                    bars. It is sometimes used to show trend data, and the comparison of
+                                    multiple data sets side by side.
+                                </p>
+                                <canvas id="bar" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                    <div class="col-lg-12 col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="mt-0">Polar Chart</h5>
+                                <p class="text-muted font-13 mb-4 d-inline-block text-truncate w-100">Polar area charts are similar to pie
+                                    charts, but each segment has the same angle - the radius of the segment
+                                    differs depending on the value.
+                                </p>
+                                <canvas id="polarArea" height="300"> </canvas>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-lg-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="mt-0">Pie Chart</h5>
+                                <p class="text-muted font-13 mb-4 d-inline-block text-truncate w-100">Pie and doughnut charts are probably
+                                    the most commonly used chart there are. They are divided into segments,
+                                    the arc of each segment shows the proportional value of each piece of
+                                    data.
+                                </p>
+                                <canvas id="pie" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                    <div class="col-lg-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="mt-0">Radar Chart</h5>
+                                <p class="text-muted font-13 mb-4 d-inline-block text-truncate w-100">A radar chart is a way of showing
+                                    multiple data points and the variation between them. They are often
+                                    useful for comparing the points of two or more different data sets.
+                                </p>
+                                <canvas id="radar" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+
+            </div><!-- container -->
+
+            <footer class="footer text-center text-sm-left">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                                © 2018-2019 Amezia <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</span>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+        <!-- end page-wrapper -->
+
+
+        <!-- jQuery  -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/waves.min.js"></script>
+        <script src="assets/js/jquery.slimscroll.min.js"></script>
+
+
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.0-beta2/Chart.min.js"></script>
+        <!-- Chart JS -->
+        <script src="assets/plugins/chart.js/chart.min.js"></script>
+        <!-- CHART.JS MAIN CODE HERE -->
+        <script>
+        !function($) {
+            "use strict";
+
+            var ChartJs = function() {};
+
+            ChartJs.prototype.respChart = function(selector,type,data, options) {
+                // get selector by context
+                var ctx = selector.get(0).getContext("2d");
+                // pointing parent container to make chart js inherit its width
+                var container = $(selector).parent();
+
+                // enable resizing matter
+                $(window).resize( generateChart );
+
+                // this function produce the responsive Chart JS
+                function generateChart(){
+                    // make chart width fit with its container
+                    var ww = selector.attr('width', $(container).width() );
+                    switch(type){
+                        case 'Line':
+                            new Chart(ctx, {type: 'line', data: data, options: options});
+                            break;
+                        case 'Doughnut':
+                            new Chart(ctx, {type: 'doughnut', data: data, options: options});
+                            break;
+                        case 'Pie':
+                            new Chart(ctx, {type: 'pie', data: data, options: options});
+                            break;
+                        case 'Bar':
+                            new Chart(ctx, {type: 'bar', data: data, options: options});
+                            break;
+                        case 'Radar':
+                            new Chart(ctx, {type: 'radar', data: data, options: options});
+                            break;
+                        case 'PolarArea':
+                            new Chart(ctx, {data: data, type: 'polarArea', options: options});
+                            break;
+                    }
+                    // Initiate new chart or Redraw
+
+                };
+                // run function - render chart at first load
+                generateChart();
+            },
+
+            //init
+            ChartJs.prototype.init = function() {
+                //creating lineChart
+                var lineChart = {
+                    labels: ["January", "February;2015", "March", "April", "May", "June;2020", "July", "August", "September", "October;2021"],
+                    datasets: [{
+                        label: "Conversion Rate",
+                        xAxisID:'xAxis1',
+                        yAxisID: 'A',
+                        fill: false,
+                        backgroundColor: '#4eb7eb',
+                        borderColor: '#4eb7eb',
+                        data: [44,60,-33,58,-4,57,-89,60,-33,58]
+                    }, {
+                        label: "Average Sale Value",
+                        yAxisID: 'B',
+                        fill: false,
+                        backgroundColor: '#e3eaef',
+                        borderColor: "#e3eaef",
+                        borderDash: [5, 5],
+                        data: [-68,41,86,-49,2,65,-64,86,-49,2]
+                    }]
+                };
+
+                var lineOpts = {
+                    responsive: true,
+                    // title:{
+                    //     display:true,
+                    //     text:'Chart.js Line Chart'
+                    // },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    hover: {
+                        mode: 'nearest',
+                        intersect: true
+                    },
+                    scales: {
+                        xAxes: [{
+
+                          //Custom code starts here double x axis
+
+                          id:'xAxis1',
+                          type:"category",
+                          ticks:{
+                            callback:function(label){
+                              var month = label.split(";")[0];
+                              var year = label.split(";")[1];
+                              return month;
+                            }
+                          }
+                          },
+                          {
+                          id:'xAxis2',
+                          type:"category",
+                          gridLines: {
+                            drawOnChartArea: false, // only want the grid lines for one axis to show up
+                          },
+                          ticks:{
+                            callback:function(label){
+                              var month = label.split(";")[0];
+                              var year = label.split(";")[1];
+                              if(month === month){
+                                return year;
+                              }else{
+                                return "";
+                              }
+                            }
+                          },
+
+              //Custom Dobule XAxis code ends here---------------------------------
+
+
+                            gridLines: {
+                                color: "rgba(0,0,0,0.1)"
+                            }
+                        }],
+                        yAxes: [{
+
+                            gridLines: {
+                                color: "rgba(255,255,255,0.05)",
+                                fontColor: '#fff'
+                            },
+                            id: 'A',
+                            type: 'linear',
+                            position: 'left',
+                            }, {
+                            id: 'B',
+                            type: 'linear',
+                            position: 'right',
+                            ticks: {
+                                max: 100,
+                                min: -100,
+                                stepSize: 20
+                            }
+                        }]
+                    }
+                };
+
+                this.respChart($("#lineChart"),'Line',lineChart, lineOpts);
+
+                //donut chart
+                var donutChart = {
+                    labels: [
+                        "Bitcoin",
+                        "Ethereum",
+                        "Litecoin",
+                        "Dashcoin",
+                    ],
+                    datasets: [
+                        {
+                            data: [80, 50, 100,121],
+                            backgroundColor: [
+                                "#f7931a",
+                                "#627eea",
+                                "#e3eaef",
+                                "#1c75bc",
+                            ],
+                            hoverBackgroundColor: [
+                                "#02c0ce",
+                                "#b2c0f5",
+                                "#e3eaef",
+                                "#9cc2e2",
+                            ],
+                          },
+
+                          //epic here is
+                          {
+                              data: [80, 50, 100,121],
+                              backgroundColor: [
+                                  "#f7931a",
+                                  "#627eea",
+                                  "#e3eaef",
+                                  "#1c75bc",
+                              ],
+                              hoverBackgroundColor: [
+                                  "#02c0ce",
+                                  "#b2c0f5",
+                                  "#e3eaef",
+                                  "#9cc2e2",
+                              ],
+                            },
+
+                          {
+                              data: [80, 50, 100,121],
+                              backgroundColor: [
+                                  "#f7931a",
+                                  "#627eea",
+                                  "#e3eaef",
+                                  "#1c75bc",
+                              ],
+                              hoverBackgroundColor: [
+                                  "#02c0ce",
+                                  "#b2c0f5",
+                                  "#e3eaef",
+                                  "#9cc2e2",
+                              ],
+                            hoverBorderColor: "#fff"
+                        }]
+                };
+                this.respChart($("#doughnut"),'Doughnut',donutChart);
+
+
+                //Pie chart
+                var pieChart = {
+                    labels: [
+                        "Desktops",
+                        "Tablets",
+                        "Mobiles",
+                        "Mobiles",
+                    ],
+                    datasets: [
+                        {
+                            data: [80, 50, 100,121],
+                            backgroundColor: [
+                                "#98d4ce",
+                                "#bac4d0",
+                                "#e3eaef",
+                                "#44a2d2",
+                            ],
+                            hoverBackgroundColor: [
+                                "#98d4ce",
+                                "#bac4d0",
+                                "#e3eaef",
+                                "#44a2d2",
+                            ],
+                            hoverBorderColor: "#fff"
+                        }]
+                };
+                this.respChart($("#pie"),'Pie',pieChart);
+
+
+                //barchart
+                var barChart = {
+                    labels: ["January", "February", "March", "April", "May", "June", "July"],
+                    datasets: [
+                        {
+                            label: "Sales Analytics",
+                            backgroundColor: "rgba(68, 162, 210, 0.4)",
+                            borderColor: "#44a2d2",
+                            borderWidth: 2,
+                            barPercentage: 0.3,
+                            categoryPercentage: 0.5,
+                            hoverBackgroundColor: "rgba(68, 162, 210, 0.7)",
+                            hoverBorderColor: "#44a2d2",
+                            data: [65, 59, 80, 81, 56, 55, 40,20]
+                        }
+                    ]
+                };
+                var barOpts = {
+                    responsive: true,
+                    scales: {
+                        xAxes: [
+                            {
+                                barPercentage: 0.8,
+                                categoryPercentage: 0.4,
+                                display: true
+                            }
+                        ]
+                    }
+
+                };
+                this.respChart($("#bar"),'Bar',barChart, barOpts);
+
+
+                //radar chart
+                var radarChart = {
+                    labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+                    datasets: [
+                        {
+                            label: "Desktops",
+                            backgroundColor: "rgba(152,212,206,0.3)",
+                            borderColor: "#98d4ce",
+                            pointBackgroundColor: "#038660",
+                            pointBorderColor: "#fff",
+                            pointHoverBackgroundColor: "#fff",
+                            pointHoverBorderColor: "rgba(179,181,198,1)",
+                            data: [65, 59, 90, 81, 56, 55, 40]
+                        },
+                        {
+                            label: "Tablets",
+                            backgroundColor: "rgba(21,128,196,0.2)",
+                            borderColor: "#1580c4",
+                            pointBackgroundColor: "#095d88",
+                            pointBorderColor: "#fff",
+                            pointHoverBackgroundColor: "#fff",
+                            pointHoverBorderColor: "rgba(255,99,132,1)",
+                            data: [28, 48, 40, 19, 96, 27, 100]
+                        }
+                    ]
+                };
+                this.respChart($("#radar"),'Radar',radarChart);
+
+                //Polar area chart
+                var polarChart = {
+                    datasets: [{
+                        data: [
+                            11,
+                            16,
+                            7,
+                            18
+                        ],
+                        backgroundColor: [
+                            "#1580c4",
+                            "#162546",
+                            "#ebeff2",
+                            "#ea3c75"
+                        ],
+                        label: 'My dataset', // for legend
+                        hoverBorderColor: "#fff"
+                    }],
+                    labels: [
+                        "Series 1",
+                        "Series 2",
+                        "Series 3",
+                        "Series 4"
+                    ]
+                };
+                this.respChart($("#polarArea"),'PolarArea',polarChart);
+            },
+            $.ChartJs = new ChartJs, $.ChartJs.Constructor = ChartJs
+
+        }(window.jQuery),
+
+        //initializing
+        function($) {
+            "use strict";
+            $.ChartJs.init()
+        }(window.jQuery);
+</script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

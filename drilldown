@@ -1,0 +1,185 @@
+
+
+HTML
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<button class="btn invisible" id="backButton">&lt; Back</button>
+
+
+
+
+CSS
+  #backButton {
+	border-radius: 4px;
+	padding: 8px;
+	border: none;
+	font-size: 16px;
+	background-color: #2eacd1;
+	color: white;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+  }
+  .invisible {
+    display: none;
+  }
+
+javascript
+
+var categories = [];
+var animals = {
+  "Total Animals": [{
+    click: animalsDrilldownHandler,
+    cursor: "pointer",
+    name: "Total Animals",
+    type: "column",
+    dataPoints: [
+      { y: 50, label: "Wild Animals", color: "#E7823A" },
+      { y: 60, label: "Pet Animals", color: "#546BC1" }
+    ]
+  }],
+  "Wild Animals": [{
+    color: "#E7823A",
+    click: wildAnimalsDrilldownHandler,
+    cursor: "pointer",
+    name: "Wild Animals",
+    type: "column",
+    dataPoints: [
+      { label: "Carnivores", y: 4 },
+      { label: "Omnivores", y: 3 },
+      { label: "Herbivores", y: 4 }
+    ]
+  }],
+  "Pet Animals": [{
+    color: "#546BC1",
+    click: petAnimalsDrilldownHandler,
+    cursor: "pointer",
+    name: "Pet Animals",
+    type: "column",
+    dataPoints: [   
+      { label: "Dogs", y: 4 },
+      { label: "Cats", y: 3 },
+      { label: "Cows", y: 4 }
+    ]
+  }],
+  "Carnivores":[{
+    name: "Carnivores",
+    type: "column",
+    dataPoints: [   
+      { label: "Lions", y: 4 },
+      { label: "Tigers", y: 3 },
+      { label: "Leapords", y: 4 }
+    ]
+  }],
+  "Omnivores":[{
+    name: "Omnivores",
+    type: "column",
+    dataPoints: [   
+      { label: "Bears", y: 4 },
+      { label: "Foxes", y: 3 },
+      { label: "Rhinoceroses", y: 4 }
+    ]
+  }],
+  "Herbivores":[{
+    name: "Herbivores",
+    type: "column",
+    dataPoints: [   
+      { label: "Elephant", y: 4 },
+      { label: "Giraffe", y: 3 },
+      { label: "Deer", y: 4 }
+    ]
+  }],
+  "Dogs":[{
+    name: "Dogs",
+    type: "column",
+    dataPoints: [   
+      { label: "German Shepherds", y: 4 },
+      { label: "Labradors", y: 3 },
+      { label: "Bulldogs", y: 4 }
+    ]
+  }],
+  "Cats":[{
+    name: "Cats",
+    type: "column",
+    dataPoints: [   
+      { label: "Rag Dolls", y: 4 },
+      { label: "Scottish Folds", y: 3 },
+      { label: "Russian Blues", y: 4 }
+    ]
+  }],
+  "Cows":[{
+    name: "Cows",
+    type: "column",
+    dataPoints: [   
+      { label: "Jersey Cattles", y: 4 },
+      { label: "Brown Swiss Cattles", y: 3 },
+      { label: "Highland Cattles", y: 4 }
+    ]
+  }]
+};
+
+var chartOptions = {
+  animationEnabled: false,
+  theme: "light2",
+  title: {
+    text: "Total Animals"
+  },
+  subtitles:[{
+    text: "Click on dataPoints to drill down"
+  }],
+  data: []
+};
+
+var chart = new CanvasJS.Chart("chartContainer", chartOptions);
+chart.options.data = animals["Total Animals"];
+chart.render();
+
+function animalsDrilldownHandler(e) {
+  categories.push({category: "total"});
+  chart.options.data = animals[e.dataPoint.label];
+  chart.options.title = { text: e.dataPoint.label }
+  chart.render();
+  $("#backButton").toggleClass("invisible");
+}
+
+function wildAnimalsDrilldownHandler(e) {
+  chart.options.data = animals[e.dataPoint.label];
+  chart.options.title = { text: e.dataPoint.label };
+  chart.options.subtitles[0].text = "";
+  chart.render();
+  categories.push({category: "wild"})
+}
+
+function petAnimalsDrilldownHandler(e) {
+  chart.options.data = animals[e.dataPoint.label];
+  chart.options.title = { text: e.dataPoint.label };
+  chart.options.subtitles[0].text = "";
+  chart.render();
+  categories.push({category: "pet"})
+}
+
+$("#backButton").click(function() { 
+//Update this condition based on the number of levels of drill down. In this example, 3 level drill down.
+  if(categories.length-1 === 1) {  	
+    chart = new CanvasJS.Chart("chartContainer", chartOptions);
+    if(categories[categories.length-1].category === "wild") {
+      chart.options.data = animals["Wild Animals"];
+      chart.options.title.text = "Wild Animals";
+      chart.options.subtitles[0].text = "Click on dataPoints to drill down";
+    }
+    else if(categories[categories.length-1].category === "pet"){
+      chart.options.data = animals["Pet Animals"];
+      chart.options.title.text = "Pet Animals";
+      chart.options.subtitles[0].text = "Click on dataPoints to drill down";
+    }
+  }
+  else {  
+    $(this).toggleClass("invisible");
+    chart = new CanvasJS.Chart("chartContainer", chartOptions);
+    chart.options.data = animals["Total Animals"]; 
+    chart.options.title.text = "Total Animals";
+    chart.options.subtitles[0].text = "Click on dataPoints to drill down";
+  }
+  chart.render();
+  categories.pop();
+});

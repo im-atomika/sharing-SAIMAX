@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Bind SELECT Dropdown with JSON using JavaScript</title>
+</head>
+<body>
+    <p>
+        <input type="button" 
+            onclick="populateSelect()" 
+                value="Click to Populate SELECT with JSON" />
+    </p>
+
+    <!--The SELECT element.-->
+    <select id="sel" onchange="show(this)">
+        <option value="">-- Select --</option>
+    </select>
+
+    <p id="msg"></p>
+</body>
+
+<script>
+    function populateSelect() {
+        // THE JSON ARRAY.
+
+        var state = [
+            {"ID": "California", "Zip": ["12345","12346"]},
+            {"ID": "Alaska", "Zip": ["66666","66667"]},
+        ];
+        var ele = document.getElementById('sel');
+        for (var i = 0; i < state.length; i++) {
+            // POPULATE SELECT ELEMENT WITH JSON.
+            ele.innerHTML = ele.innerHTML +
+                '<option value="' + state[i]['Zip'] + '">' + state[i]['ID'] + '</option>';
+        }
+    }
+
+    function show(ele) {
+        // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+        var msg = document.getElementById('msg');
+        msg.innerHTML = 'Selected zip: <b>'+'ID: <b>' + ele.value + '</b>';
+    }
+</script>
+</html>
